@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm kiếm lớn nhất</title>
+</head>
+<body>
+<h1>Tìm kiếm số lớn nhất trong mảng</h1>
+<form>
+    <p>Dãy số</p>
+    <input type="text" id="array" placeholder="Nhập dãy số"/>
+    <br><br>
+    <input type="button" onclick="findMax()" value="Kết quả">
+    <br>
+</form>
+<p id="max"></p>
+<script>
+    function findMax(){
+        var array = document.getElementById("array").value;
+        var max = array;
+        for (i = 0; i < array.length; i++){
+            if(array[i] > max){
+                max = array[i]
+            }
+        }
+        return document.getElementById("max").innerHTML = "Số lớn nhất trong dãy số trên là " + max ;
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm kiếm tuyến tính</title>
+</head>
+<body>
+<h1>Tìm kiếm tuyến tính</h1>
+<form>
+    <p>Dãy số</p>
+    <input type="text" id="array" placeholder="Nhập dãy số"/>
+    <br>
+    <p>Số cần tìm</p>
+    <input type="text" id="number" placeholder="Nhập số cần tìm"/>
+    <br><br>
+    <input type="button" onclick="findLinear()" value="Kết quả">
+    <br>
+</form>
+<p id="result"></p>
+<script>
+    function findLinear(){
+        var array = document.getElementById("array").value.split(',');
+        var numberToFind = document.getElementById("number").value;
+        for (i = 0; i < array.length; i++){
+            if(array[i] === numberToFind){
+                return document.getElementById("result").innerHTML = "Số cần tìm ở vị trí " + i;
+            }
+        }
+        return document.getElementById("result").innerHTML = "Không tìm thấy số " + numberToFind + " trong dãy số trên";
+    }
+</script>
+</body>
+</html>

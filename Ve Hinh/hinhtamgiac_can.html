@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hình tam giác cân</title>
+</head>
+<body>
+<script>
+    ch = prompt("Nhập chiều cao của tam giác","Nhập vào đây");
+    document.write('<table border="0">');
+    for(j=0; j<ch; j++){
+        document.write('<tr>');
+        for(i=ch-1; i>j; i--) {
+                document.write('<td>');
+                document.write(' ');
+                document.write('</td>');
+            }
+        for(i=1; i<=j*2+1; i++){
+                document.write('<td>');
+                document.write('*');
+                document.write('</td>');
+            }
+        document.write('</tr>');
+    }
+    document.write('</table>');
+</script>
+</body>
+</html>

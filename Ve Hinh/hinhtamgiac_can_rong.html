@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hình tam giác cân rỗng</title>
+</head>
+<body>
+<script>
+    ch = prompt("Nhập chiều cao của tam giác","Nhập vào đây");
+    document.write('<table border="0">');
+    for(j=0; j<ch; j++){
+        document.write('<tr>');
+        for(i=ch-1; i>j; i--) {
+                document.write('<td>');
+                document.write(' ');
+                document.write('</td>');
+        }
+        for(i=1; i<=j*2+1; i++){
+            if (i == 1 | i == j*2+1 | j == 0 | j == ch-1) {
+                document.write('<td>');
+                document.write('*');
+                document.write('</td>');
+            }else{
+                document.write('<td>');
+                document.write(' ');
+                document.write('</td>');
+            }
+        }
+        document.write('</tr>');
+    }
+    document.write('</table>');
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hình chữ nhật</title>
+</head>
+<body>
+<script>
+    cd = prompt("Nhập chiều dài","Nhập vào đây");
+    cr = prompt("Nhập chiều rộng","Nhập vào đây");
+    document.write('<table border="0">');
+    for(j=1; j<=cr; j++){
+        document.write('<tr>');
+        for(i=1; i<=cd; i++) {
+            document.write('<td>');
+            document.write('*');
+            document.write('</td>');
+        }
+        document.write('</tr>');
+    }
+    document.write('</table>');
+</script>
+</body>
+</html>
